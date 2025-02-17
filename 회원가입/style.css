@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 5%;
+}
+
+form label {
+  font-size: 10px;
+  color: black;
+  margin: 3px;
+}
+
+form select,
+form input {
+  height: 40px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+form div {
+  border: 1px solid;
+  display: flex;
+  background-color: gray;
+}
+
+form div input {
+  margin-bottom: 0;
+  flex: 1;
+  cursor: pointer;
+}
+
+form div input:hover {
+  opacity: 0.8;
+}
+
+form div input:active {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+form div :first-child {
+  flex: 2;
+  background-color: red;
+  color: white;
+}
