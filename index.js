@@ -48,6 +48,13 @@ divs.forEach((div, index) => {
 
 const button = document.querySelector("button");
 
+const body = document.querySelector("body");
+const div = document.createElement("div");
+div.className = "score";
+
+const p1 = document.createElement("p");
+const p2 = document.createElement("p");
+
 const whoWins = (d1, d2) => {
   let sum1 = 0;
   let sum2 = 0;
@@ -65,19 +72,11 @@ const whoWins = (d1, d2) => {
     }
   });
   button.innerText = " 한판더!";
-  const body = document.querySelector("body");
-  const div = document.createElement("div");
-  div.className = "score";
-
-  const p1 = document.createElement("p");
-  const p2 = document.createElement("p");
 
   p1.innerText = `${sum1}: ${sum2}`;
   p2.innerText = sum1 === sum2 ? "Tie" : `You ${sum1 > sum2 ? "Win" : "Lose"}`;
 
-  div.append(p1, p2);
-
-  body.append(div);
+  div.style.display = "block";
 };
 
 button.onclick = () => {
