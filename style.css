@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+#root div {
+  display: flex;
+  column-gap: 20px;
+}
+
+#root img {
+  width: 50px;
+  height: 50px;
+  animation: roll 3s ease infinite;
+}
+
+#root button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.score {
+  border: 1px solid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
